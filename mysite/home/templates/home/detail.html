@@ -1,0 +1,39 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+
+<div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px; background-color:#8B7E97 ;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+
+                
+                    <h3> {{headline.headline_name}}</h3>
+                    <h3> {{headline.headline_desc}}</h3>
+                    <h3> {{headline.headline_content}}</h3>
+                    
+                    <a href = "{% url 'home:update_HL' headline.id %}" class = "btn btn-dark">Update</a>
+                    <a href = "{% url 'home:delete_HL' headline.id %}" class = "btn btn-dark">Delete</a> 
+
+            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                    
+                <img src="{{ headline.headline_image }}"
+                  class="img-fluid" style = "height:400px; flex:auto;" alt="alt image">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,44 @@
+{% extends 'home/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headlines</title>
+    </head>
+<body>
+    {% block body %}
+    <div class = "container">
+        <h2> Data Table </h2>
+        <table class = "table table-hover table-responsive">
+            <thread>
+                <tr>
+                    <th>Name</th>
+                    <th>Desciption</th>
+                    <th>content</th>
+                </tr>
+            </thread>
+            {% for headline in headline_list %}
+            <tbody>
+                <td> {{headline.headline_name}}     </td>
+                <td> {{headline.headline_desc}}     </td>
+                <td> {{headline.headline_content}}  </td>
+                <td>
+                    <select id = "mySelect" onchange = "window.location.href = this.value;">
+                        <option value = "#">More</option>
+                        <option value = "{% url 'home:detail' headline.id %}">Detail</option>
+                        <option value = "{% url 'home:update_HL' headline.id %}">Edit</option>
+                        <option value = "{% url 'home:delete_HL' headline.id %}"> Delete</option>
+                    </div class = "dropdown">
+                </td>
+                 
+            </tbody>
+            {% endfor %}
+        </table>
+           
+    </div>    
+    {% endblock %}
+    
+</body>
+</html>

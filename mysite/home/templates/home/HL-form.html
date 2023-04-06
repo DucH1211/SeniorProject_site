@@ -1,0 +1,80 @@
+{% extends 'home/base.html' %}
+{% block body %}
+{% if error_msg %}
+  <div class = "alert alert-danger" role = 'alert'>
+    {{error_msg}}
+  </div>
+  {% endif %}
+<section class="vh-100" style="background-color: #E6E6F5;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px; background-color:#8B7E97 ;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Database</p> 
+                    <form method="POST" class="mx-1 mx-md-4">
+                        {% csrf_token %}
+                        <div class = row>
+
+                        <!--Name-->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" class =" form-control" name="{{ form.headline_name.name }}" value="{{ headline.headline_name }}" id="{{ form.headline_name.id_for_label }}">    
+                                <label class = "form-label" for="{{ form.headline_name.id_for_label}}">Name:</label>
+
+                            </div>
+                        </div>
+                        <!--Desc-->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" class =" form-control" name="{{ form.headline_desc.name }}" value="{{ headline.headline_desc }}" id="{{ form.headline_desc.id_for_label }}">
+                                <label class = "form-label" for="{{ form.headline_desc.id_for_label }}">Description:</label>
+
+                            </div>
+                        </div>  
+                        <!--Content-->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" class =" form-control" name="{{ form.headline_content.name }}" value="{{ headline.headline_content }}" id="{{ form.headline_content.id_for_label }}">
+                                <label class = "form-label" for="{{ form.headline_content.id_for_label }}">URL:</label>
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" class =" form-control" name="{{ form.headline_image.name }}" value="{{ headline.headline_image }}" id="{{ form.field3.id_for_label }}">
+                                <label class = "form-label" for="{{ form.headline_image.id_for_label }}">Image :</label>
+
+                            </div>
+                        </div>
+                        <!--Submit-->
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                <button type="submit" class = 'btn btn-dark btn-lg' class = 'btn btn-dark'>Save</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                    
+                  <img src="{{ headline.headline_image }}"
+                    class="img-fluid" style = "height:400px; flex:auto;" alt="alt image">
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Display the existing item details in the appropriate form fields -->
+
+{% endblock %}

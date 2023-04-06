@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: SynonymRegular;
+    src: url(Synonym-Regular.ttf);
+}
+
+@font-face {
+    font-family: SynonymSemibold;
+    src: url(Synonym-Semibold.ttf);
+}
+
+@font-face {
+    font-family: Iosevka;
+    src: url(iosevka.ttf);
+}
+
+@font-face {
+    font-family: Supply;
+    src: url(PPSupplySans-Regular.otf) format("opentype");
+}
+
+header {
+    background-color: rgb(245, 245, 250);
+    font-family: Iosevka;
+    font-size: larger;
+    position: relative;
+    color: rgb(139, 126, 151);  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 100%;
+}
+
+nav {
+    justify-content: right;
+}
+
+.nav-link {
+    display: inline-block;
+    min-width: 10rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+body {
+    background-color: rgb(245, 245, 250);
+    color: rgb(57, 52, 63);
+    font-family: Helvetica Neue, sans-serif;
+    font-size: large;
+    padding-bottom: 5rem;
+}
+
+.bodytext {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+h1 {
+    font-family: SynonymSemibold;
+    padding-top: 3rem;
+    padding-bottom: .3rem;
+    text-align: left;
+}
+
+h2 {
+    font-family: SynonymSemibold;
+    text-align: left;
+    padding-bottom: 0rem;
+}
+
+p {
+    font-family: SynonymRegular;
+    font-size: larger;
+    font-weight: regular;
+    padding-bottom: 1rem;
+}
+#mySelect{
+    appearance: none;
+  background-color: #8B7E97;
+  border: #E6E6F5;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#mySelect:hover{
+    background-color: azure;
+    cursor: pointer;
+}
+.collapse .dropdown .dropdown-menu{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.dropdown-item{
+    color: #8B7E97;
+    background-color: #E6E6F5;
+    border: 1px solid #E6E6F5;
+    font-family: Iosevka;
+    font-size: large;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    box-shadow: none;
+    height: 4rem;
+    min-width: 10rem;
+    margin: 0 auto;
+}
+.dropdown-item:hover{
+    border-radius: 2rem;
+    background-color: #8B7E97;
+    color:black
+}
+form {
+    font-family: SynonymRegular;
+}
+.navbar-light .navbar-brand{
+    color:azure
+}
+.navbar-nav .nav-item .nav-link{
+    color: azure;
+}
+.navbar .bg-white{
+    background-color: lightskyblue;
+}
+
+li {
+    font-family: SynonymRegular;
+    margin-left: 1rem;
+}
+
+.btn {
+    color: #8B7E97;
+    background-color: #E6E6F5;
+    border: 1px solid #E6E6F5;
+    font-family: Iosevka;
+    font-size: large;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    box-shadow: none;
+    height: 3rem;
+    min-width: 10rem;
+    margin: 0 auto;
+} 
+
+.btn:hover {
+    border: 1px solid #8B7E97;
+} 
+
+.btn:active {
+    background-color: #8B7E97;
+    color: #E6E6F5;
+}
+
+.btn-current {
+    color: #E6E6F5;
+    background-color: #8B7E97;
+    border: 1px solid #8B7E97;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-green {
+    color: #7E9782;
+    background-color: #E6F5E6;
+    border: 1px solid #E6F5E6;
+    font-family: Iosevka;
+    font-size: large;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    box-shadow: none;
+    height: 3rem;
+    min-width: 10rem;
+}
+
+.btn-green:hover {
+    border: 1px solid #7E9782;
+}
+
+.btn-green:active {
+    color: #E6F5E6;
+    background-color: #7E9782;
+    border: 1px solid #7E9782;
+}

@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    
+</head>
+<body>
+    {% block body %}
+    <header>
+        <h3>Crime Mining</h3>
+    </header> 
+    <div class="bodytext">
+        <h2> About this project </h2>
+        <p> 
+            This website serves as a data visualization tool for the 
+            National Crime Victimization Survey. 
+        </p>
+        <h2> About the dataset </h2>
+        <p>
+            The National Crime Victimization Survey (NCVS) is a 
+            comprehensive survey of crime victimization in the 
+            United States, and is the Bureau of Justice Statistics'
+            primary source of information on crime victimization.
+            The data spans from 1992 through 2021, obtained from a
+            sample of nearly a quarter million individuals in over
+            150,000 households nationwide.
+        </p>
+        <p>
+            The NCVS includes crimes not reported to the police, 
+            allowing for a more thorough representation of 
+            crime victimization than other crime surveys.
+        </p>
+    </div>
+    {% endblock %}
+    
+</body>
+</html>
